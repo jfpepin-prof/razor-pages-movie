@@ -24,5 +24,6 @@ jobs:
     - name: Build
       run: dotnet build -c Release --no-restore
 
-
+    - name: Exécuter les tests
+      run: dotnet test -c Release --no-build
       
