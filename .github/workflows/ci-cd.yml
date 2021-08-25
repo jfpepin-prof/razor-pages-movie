@@ -1,0 +1,29 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout du code
+      uses: actions/checkout@v2
+      
+    - name: Configurer .NET 5
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+        
+    - name: Installer les dépendances
+      run: dotnet restore
+      
+    - name: Build
+      run: dotnet build -c Release --no-restore
+
+    - name: Exécuter les tests
+      run: dotnet test -c Release --no-build
+      
