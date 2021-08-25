@@ -33,3 +33,4 @@ jobs:
         app-name: demo-ci-cd
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2362A839F5BF44399A1D816673E44128 }}
         package: ./out
+      
