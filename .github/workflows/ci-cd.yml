@@ -16,7 +16,7 @@ jobs:
     - name: Checkout du code
       uses: actions/checkout@v2 
 
-    - name: Configurer .NET 5
+    - name: Configurer dotnet 5
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
